@@ -20,4 +20,4 @@ NxOfflineSw.install();
 ```
 
 ## resources
-- https://github.com/afeiship
+- https://github.com/NekR/offline-plugin/blob/master/docs/updates.md
