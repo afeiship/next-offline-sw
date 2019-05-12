@@ -1,0 +1,26 @@
+{
+  "name": "next-offline-sw",
+  "description": "Offline plugin for service worker runtime helper",
+  "main": "dist/next-offline-sw.js",
+  "authors": [
+    "afei"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "next"
+  ],
+  "homepage": "https://github.com/afeiship/next-offline-sw",
+  "moduleType": [
+    "amd"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src",
+    "build",
+    "gulpfile.js"
+  ]
+}
