@@ -13,7 +13,7 @@
   var NxOfflineSw = nx.declare('nx.OfflineSw', {
     statics: {
       install: function(inOptions) {
-        var options = nx.mix(DEFAULT_OPTIONS, inOptions);
+        var options = nx.mix(null, DEFAULT_OPTIONS, inOptions);
         runtime.install(options);
       },
       uninstall: function() {

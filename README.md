@@ -7,9 +7,10 @@ npm install -S afeiship/next-offline-sw --registry=https://registry.npm.taobao.o
 ```
 
 ## apis
-| api     | params  | description                |
-| ------- | ------- | -------------------------- |
-| install | options | install with sevice worker |
+| api       | params  | description                |
+| --------- | ------- | -------------------------- |
+| install   | options | Install with sevice worker |
+| uninstall | -       | Remove all sevice worker   |
 
 ## usage
 ```js
