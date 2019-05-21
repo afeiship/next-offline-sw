@@ -8,6 +8,7 @@
 (function() {
   var global = global || this || window || Function('return this')();
   var nx = global.nx || require('next-js-core2');
+  var NAV = global.navigator;
   var runtime = require('offline-plugin/runtime');
   var DEFAULT_OPTIONS = {
     onUpdateReady: function() {
@@ -21,6 +22,13 @@
       install: function(inOptions) {
         var options = nx.mix(DEFAULT_OPTIONS, inOptions);
         runtime.install(options);
+      },
+      uninstall: function() {
+        NAV.serviceWorker.getRegistrations().then(function(registrations) {
+          registrations.forEach(function(registration) {
+            registration.unregister();
+          });
+        });
       }
     }
   });
