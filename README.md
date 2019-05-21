@@ -22,3 +22,4 @@ NxOfflineSw.install();
 
 ## resources
 - https://github.com/NekR/offline-plugin/blob/master/docs/updates.md
+- https://stackoverflow.com/questions/33704791/how-do-i-uninstall-a-service-worker
