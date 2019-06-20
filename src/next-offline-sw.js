@@ -5,13 +5,18 @@
   var runtime = require('offline-plugin/runtime');
   var DEFAULT_OPTIONS = {
     onUpdateReady: function() {
-      console.log('SW Event:', 'onUpdateReady');
-      runtime.applyUpdate();
+      nx.OfflineSw.updated = false;
+      console.warn(
+        'SW Event:',
+        'You need to call `nx.OfflineSw.applyUpdate` to update resource when [onUpdated].'
+      );
     }
   };
 
   var NxOfflineSw = nx.declare('nx.OfflineSw', {
     statics: {
+      updated: false,
+      runtime: runtime,
       install: function(inOptions) {
         var options = nx.mix(null, DEFAULT_OPTIONS, inOptions);
         runtime.install(options);
@@ -22,6 +27,14 @@
             registration.unregister();
           });
         });
+      },
+      refresh: function() {
+        global.location.reload();
+      },
+      applyUpdate: function(inCallback) {
+        runtime.applyUpdate();
+        this.updated = true;
+        inCallback();
       }
     }
   });
