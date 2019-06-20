@@ -2,7 +2,7 @@
  * name: next-offline-sw
  * url: https://github.com/afeiship/next-offline-sw
  * version: 1.0.0
- * date: 2019-06-20T07:18:02.735Z
+ * date: 2019-06-20T07:50:50.962Z
  * license: MIT
  */
 
@@ -13,7 +13,6 @@
   var runtime = require('offline-plugin/runtime');
   var DEFAULT_OPTIONS = {
     onUpdateReady: function() {
-      nx.OfflineSw.updated = false;
       console.warn(
         'SW Event:',
         'You need to call `nx.OfflineSw.applyUpdate` to update resource when [onUpdated].'
@@ -23,7 +22,6 @@
 
   var NxOfflineSw = nx.declare('nx.OfflineSw', {
     statics: {
-      updated: false,
       runtime: runtime,
       install: function(inOptions) {
         var options = nx.mix(null, DEFAULT_OPTIONS, inOptions);
@@ -36,13 +34,21 @@
           });
         });
       },
+      update: function() {
+        var self = this;
+        return new Promise(function(resolve) {
+          self.applyUpdate(function() {
+            setTimeout(function() {
+              self.refresh();
+            }, 1000);
+          });
+        });
+      },
       refresh: function() {
         global.location.reload();
       },
-      applyUpdate: function(inCallback) {
+      applyUpdate: function() {
         runtime.applyUpdate();
-        this.updated = true;
-        inCallback();
       }
     }
   });
