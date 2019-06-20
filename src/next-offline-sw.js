@@ -28,12 +28,11 @@
       },
       update: function(inDelay) {
         var self = this;
-        var delay = inDelay || 500;
-        this.applyUpdate(function() {
-          setTimeout(function() {
-            self.refresh();
-          }, delay);
-        });
+        var delay = inDelay || 300;
+        this.applyUpdate();
+        setTimeout(function() {
+          self.refresh();
+        }, delay);
       },
       refresh: function() {
         global.location.reload();
