@@ -28,13 +28,11 @@
       },
       update: function(inDelay) {
         var self = this;
-        var delay = inDelay || 300;
-        return new Promise(function(resolve) {
-          self.applyUpdate(function() {
-            setTimeout(function() {
-              self.refresh();
-            }, delay);
-          });
+        var delay = inDelay || 500;
+        this.applyUpdate(function() {
+          setTimeout(function() {
+            self.refresh();
+          }, delay);
         });
       },
       refresh: function() {
