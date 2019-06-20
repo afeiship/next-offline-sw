@@ -2,7 +2,7 @@
  * name: next-offline-sw
  * url: https://github.com/afeiship/next-offline-sw
  * version: 1.0.0
- * date: 2019-06-20T07:50:50.962Z
+ * date: 2019-06-20T07:53:26.063Z
  * license: MIT
  */
 
@@ -34,13 +34,14 @@
           });
         });
       },
-      update: function() {
+      update: function(inDelay) {
         var self = this;
+        var delay = inDelay || 300;
         return new Promise(function(resolve) {
           self.applyUpdate(function() {
             setTimeout(function() {
               self.refresh();
-            }, 1000);
+            }, delay);
           });
         });
       },

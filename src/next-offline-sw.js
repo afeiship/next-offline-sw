@@ -26,13 +26,14 @@
           });
         });
       },
-      update: function() {
+      update: function(inDelay) {
         var self = this;
+        var delay = inDelay || 300;
         return new Promise(function(resolve) {
           self.applyUpdate(function() {
             setTimeout(function() {
               self.refresh();
-            }, 1000);
+            }, delay);
           });
         });
       },
