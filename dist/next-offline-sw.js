@@ -1,8 +1,8 @@
 /*!
  * name: next-offline-sw
  * url: https://github.com/afeiship/next-offline-sw
- * version: 1.0.0
- * date: 2019-06-20T07:59:51.537Z
+ * version: 1.1.0
+ * date: 2019-06-21T01:35:23.896Z
  * license: MIT
  */
 
