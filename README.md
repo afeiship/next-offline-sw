@@ -7,13 +7,14 @@ npm install -S afeiship/next-offline-sw --registry=https://registry.npm.taobao.o
 ```
 
 ## apis
-| api         | params  | description                 |
-| ----------- | ------- | --------------------------- |
-| install     | options | Install with sevice worker  |
-| uninstall   | -       | Remove all sevice worker    |
-| update      | -       | ApplyUpdate & delay refresh |
-| applyUpdate | -       | Apply new resource          |
-| refresh     | -       | Global.reload               |
+| api         | params  | description                                                           |
+| ----------- | ------- | --------------------------------------------------------------------- |
+| disabled    |         | You can implement it in your project(default: window.__SW_DISABLED__) |
+| install     | options | Install with sevice worker                                            |
+| uninstall   | -       | Remove all sevice worker                                              |
+| update      | -       | ApplyUpdate & delay refresh                                           |
+| applyUpdate | -       | Apply new resource                                                    |
+| refresh     | -       | Global.reload                                                         |
 
 
 ## usage

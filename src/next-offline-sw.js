@@ -15,7 +15,11 @@
   var NxOfflineSw = nx.declare('nx.OfflineSw', {
     statics: {
       runtime: runtime,
+      disabled: function() {
+        return global.__SW_DISABLED__;
+      },
       install: function(inOptions) {
+        if (this.disabled()) return;
         var options = nx.mix(null, DEFAULT_OPTIONS, inOptions);
         runtime.install(options);
       },
