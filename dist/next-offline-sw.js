@@ -1,14 +1,15 @@
 /*!
- * name: next-offline-sw
+ * name: @feizheng/next-offline-sw
+ * description: Offline plugin for service worker runtime helper.
  * url: https://github.com/afeiship/next-offline-sw
- * version: 1.1.0
- * date: 2019-06-23T07:58:52.400Z
+ * version: 1.0.0
+ * date: 2019-12-18 19:05:10
  * license: MIT
  */
 
 (function() {
   var global = global || this || window || Function('return this')();
-  var nx = global.nx || require('next-js-core2');
+  var nx = global.nx || require('@feizheng/next-js-core2');
   var NAV = global.navigator;
   var runtime = require('offline-plugin/runtime');
   var DEFAULT_OPTIONS = {

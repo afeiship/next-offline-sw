@@ -1,6 +1,6 @@
 {
   "name": "next-offline-sw",
-  "description": "Offline plugin for service worker runtime helper",
+  "description": "Offline plugin for service worker runtime helper.",
   "main": "dist/next-offline-sw.js",
   "authors": [
     "afei"

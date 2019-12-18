@@ -3,7 +3,7 @@
 
 ## install
 ```bash
-npm install -S afeiship/next-offline-sw --registry=https://registry.npm.taobao.org
+npm install -S @feizheng/next-offline-sw
 ```
 
 ## apis
