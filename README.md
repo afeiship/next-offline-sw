@@ -19,7 +19,7 @@ npm install -S @feizheng/next-offline-sw
 
 ## usage
 ```js
-import NxOfflineSw from 'next-offline-sw';
+import NxOfflineSw from '@feizheng/next-offline-sw';
 
 // code goes here:
 NxOfflineSw.install();
