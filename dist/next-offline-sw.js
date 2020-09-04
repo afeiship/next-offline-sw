@@ -1,9 +1,9 @@
 /*!
  * name: @feizheng/next-offline-sw
  * description: Offline plugin for service worker runtime helper.
- * url: https://github.com/afeiship/next-offline-sw
- * version: 1.0.0
- * date: 2019-12-18 19:05:10
+ * homepage: https://github.com/afeiship/next-offline-sw
+ * version: 1.0.2
+ * date: 2020-09-04T13:32:13.246Z
  * license: MIT
  */
 
@@ -60,5 +60,3 @@
     module.exports = NxOfflineSw;
   }
 })();
-
-//# sourceMappingURL=next-offline-sw.js.map

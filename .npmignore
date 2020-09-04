@@ -14,3 +14,8 @@ Gemfile
 jest.config.js
 LICENSE.txt
 Rakefile
+.vscode
+docs
+
+# vscode localhistory
+.history
