@@ -1,19 +1,10 @@
-/*!
- * name: @feizheng/next-offline-sw
- * description: Offline plugin for service worker runtime helper.
- * homepage: https://github.com/afeiship/next-offline-sw
- * version: 1.0.2
- * date: 2020-09-04T13:32:13.246Z
- * license: MIT
- */
-
-(function() {
+(function () {
   var global = global || this || window || Function('return this')();
-  var nx = global.nx || require('@feizheng/next-js-core2');
+  var nx = global.nx || require('@jswork/next-js-core2');
   var NAV = global.navigator;
   var runtime = require('offline-plugin/runtime');
   var DEFAULT_OPTIONS = {
-    onUpdateReady: function() {
+    onUpdateReady: function () {
       console.warn(
         'SW Event:',
         'You need to call `nx.OfflineSw.applyUpdate` to update resource when [onUpdated].'
@@ -24,33 +15,33 @@
   var NxOfflineSw = nx.declare('nx.OfflineSw', {
     statics: {
       runtime: runtime,
-      disabled: function() {
+      disabled: function () {
         return global.__SW_DISABLED__;
       },
-      install: function(inOptions) {
+      install: function (inOptions) {
         if (this.disabled()) return;
         var options = nx.mix(null, DEFAULT_OPTIONS, inOptions);
         runtime.install(options);
       },
-      uninstall: function() {
-        NAV.serviceWorker.getRegistrations().then(function(registrations) {
-          registrations.forEach(function(registration) {
+      uninstall: function () {
+        NAV.serviceWorker.getRegistrations().then(function (registrations) {
+          registrations.forEach(function (registration) {
             registration.unregister();
           });
         });
       },
-      update: function(inDelay) {
+      update: function (inDelay) {
         var self = this;
         var delay = inDelay || 300;
         this.applyUpdate();
-        setTimeout(function() {
+        setTimeout(function () {
           self.refresh();
         }, delay);
       },
-      refresh: function() {
+      refresh: function () {
         global.location.reload();
       },
-      applyUpdate: function() {
+      applyUpdate: function () {
         runtime.applyUpdate();
       }
     }
