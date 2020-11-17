@@ -1,6 +1,6 @@
 (function () {
   var global = global || this || window || Function('return this')();
-  var nx = global.nx || require('@jswork/next-js-core2');
+  var nx = global.nx || require('@jswork/next');
   var NAV = global.navigator;
   var runtime = require('offline-plugin/runtime');
   var DEFAULT_OPTIONS = {

@@ -3,13 +3,13 @@
  * description: Offline plugin for service worker runtime helper.
  * homepage: https://github.com/afeiship/next-offline-sw
  * version: 1.0.0
- * date: 2020-11-17T09:43:20.528Z
+ * date: 2020-11-17T12:44:18.486Z
  * license: MIT
  */
 
 (function () {
   var global = global || this || window || Function('return this')();
-  var nx = global.nx || require('@jswork/next-js-core2');
+  var nx = global.nx || require('@jswork/next');
   var NAV = global.navigator;
   var runtime = require('offline-plugin/runtime');
   var DEFAULT_OPTIONS = {
