@@ -1,6 +1,6 @@
 {
   "name": "@jswork/next-offline-sw",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Offline plugin for service worker runtime helper.",
   "homepage": "https://github.com/afeiship/next-offline-sw",
   "author": {

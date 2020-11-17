@@ -2,8 +2,8 @@
  * name: @jswork/next-offline-sw
  * description: Offline plugin for service worker runtime helper.
  * homepage: https://github.com/afeiship/next-offline-sw
- * version: 1.0.1
- * date: 2020-11-17T12:45:35.167Z
+ * version: 1.0.2
+ * date: 2020-11-17T13:56:01.626Z
  * license: MIT
  */
 
